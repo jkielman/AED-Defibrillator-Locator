@@ -1,0 +1,35 @@
+ [
+        {
+            "Facility_Name": "Scarborough Transfer Station",
+            "Facility_Type": "Industrial Facility",
+            "Street_Address": "1 Transfer PL ",
+            "Postal_Code": "M1S 5H8",
+            "Device_Location": "Scale House",
+            "Device_Counts": "1"
+        },
+        {
+            "Facility_Name": "City Adult Learning Centre",
+            "Facility_Type": "School",
+            "Street_Address": "1 Danforth AVE ",
+            "Postal_Code": "M4D 1M8",
+            "Device_Location": "Main Office",
+            "Device_Counts": "1"
+        },
+        {
+            "Facility_Name": "Monarch Park CI",
+            "Facility_Type": "School",
+            "Street_Address": "1 Hanson ST ",
+            "Postal_Code": "M4J 1G6",
+            "Device_Location": "Outside Main Office",
+            "Device_Counts": "1"
+        },
+        {
+            "Facility_Name": "Yonge Dundas Square",
+            "Facility_Type": "Office",
+            "Street_Address": "1 Dundas ST East",
+            "Postal_Code": "M4M 1S4",
+            "Device_Location": "Security Booth",
+            "Device_Counts": "1"
+        }
+
+        ]
