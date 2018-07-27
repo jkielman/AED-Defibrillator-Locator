@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import { geolocated } from 'react-geolocated';
 import ScrollToTop from 'react-router-scroll-top';
 import './style.scss';
 import data from './data/data.json';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 
+const newData  = {
 
+  Name:'',
+  Address:'',
+  Count:''
+
+}
 
 
 
