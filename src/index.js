@@ -6,16 +6,19 @@ import './style.scss';
 import data from './data/data.json';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-
-const newData  = {
-
-  Name:'',
-  Address:'',
-  Count:''
-
+function find(dups) {
+    return dups.Facility_Name;
 }
 
+const dupsFound = {};
 
+data.forEach((dups) => {
+    dupsFound[find(dups)] = dups;
+})
+
+const results = Object.keys(dupsFound).map((resultData) => {
+    return dupsFound[resultData];
+})
 
 class App extends React.Component {
   constructor() {
@@ -32,6 +35,7 @@ class App extends React.Component {
   }
 
   getMyLocation() {
+
     const location = window.navigator && window.navigator.geolocation
 
     if (location) {
@@ -48,12 +52,12 @@ class App extends React.Component {
   }
 
   render() {
+
     const { latitude, longitude } = this.state
 
     return (
       <div>
-        {/*<input type="text" value={latitude} />
-        <input type="text" value={longitude} />*/}
+
         <Row>
           <Col xs={12}>
             <Row center="xs">
@@ -64,8 +68,12 @@ class App extends React.Component {
               <Col xs={12} >
               <h1>Nearest Locations</h1>
               {
-                data.map((defib, index ) => {
-                  return <div key={index}>{defib.Facility_Name}{defib.Street_Address}{defib.Device_Counts}</div>
+                results.map((defib, index ) => {
+                  return <div key={index}>
+                              {defib.Facility_Name}
+                              {defib.Street_Address}
+                              {defib.Device_Counts}
+                         </div>
                 })
               }
               </Col>
